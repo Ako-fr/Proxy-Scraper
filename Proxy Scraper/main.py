@@ -120,6 +120,7 @@ def main():
         proxies = Write.Input("[>] Que voulez-vous faire : ", Colors.white ,interval=0.01)
         if proxies == "1":
             scrape_socks4()
+            input()
             cls()
             download()
         elif proxies == "2":
@@ -149,10 +150,10 @@ def main():
             for proxy in proxies:
                 Thread(target=check_socks4, args=[proxy]).start()
                 sleep(0.1)
+            check_socks4()
             a = len(open("valid_socks4.txt").readlines())
             print(style + "Proxy Online : " + str(a))
             input()
-            check_socks4()
             cls()
             checking()
             

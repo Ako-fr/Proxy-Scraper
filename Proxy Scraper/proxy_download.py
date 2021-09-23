@@ -9,8 +9,8 @@ def scrape_socks4():
         _socks4 = "\n".join(_socks4)
         with open("socks4.txt", "a") as f:
             f.write(str(_socks4))
-    a = len(open("socks5.txt").readlines())
-    print(style + "Proxy chargé : " + str(a))
+    a = len(open("socks4.txt").readlines())
+    print(style + "Proxy Download : " + str(a))
     input()
 
 def scrape_socks5():
@@ -21,5 +21,5 @@ def scrape_socks5():
         with open("socks5.txt", "a") as f:
             f.write(str(_socks4))
     a = len(open("socks5.txt").readlines())
-    print(style + "Proxy chargé : " + str(a))
+    print(style + "Proxy Download : " + str(a))
     input()
